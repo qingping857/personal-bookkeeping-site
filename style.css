@@ -1,0 +1,111 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('https://example.com/romantic-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.5s ease-in-out;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 90%;
+}
+
+h1 {
+    text-align: center;
+    color: #ff6b81;
+    font-weight: 500;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    position: relative;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.tags-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.tag-item {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag-item:hover {
+    background-color: #ffebee;
+}
+
+.delete-tag {
+    margin-left: 10px;
+    color: red;
+    cursor: pointer;
+}
+
+.button {
+    display: inline-block;
+    background: #ff6b81;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #ff4c61;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1em;
+    margin: 0;
+}

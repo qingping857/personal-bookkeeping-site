@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <title>记账系统</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 id="header-title">个人记账系统</h1>
+        <div id="name-section" class="card">
+            <input type="text" id="user-name" placeholder="请输入您的名字">
+            <button class="button" onclick="setUserName()">设置名字</button>
+        </div>
+
+        <div id="background-section" class="card">
+            <h2>设置背景图片</h2>
+            <input type="file" id="background-upload" accept="image/*">
+            <button class="button" onclick="setBackgroundImage()">上传并设置背景</button>
+        </div>
+
+        <div id="input-section" class="card">
+            <div class="input-group">
+                <input type="text" id="item" placeholder="账目项目" onfocus="showItemTags()" onblur="hideItemTags()">
+                <div id="item-tags" class="tags-container"></div>
+            </div>
+            <input type="number" id="amount" placeholder="金额">
+            <input type="text" id="note" placeholder="备注">
+            <button class="button" onclick="addEntry()">添加账目</button>
+        </div>
+
+        <div id="budget-section" class="card">
+            <h2>每月预算设定</h2>
+            <div class="input-group">
+                <input type="text" id="budget-item" placeholder="预算项目" onfocus="showBudgetTags()" onblur="hideBudgetTags()">
+                <div id="budget-tags" class="tags-container"></div>
+            </div>
+            <input type="number" id="budget-limit" placeholder="预算额度">
+            <button class="button" onclick="setBudget()">设定预算</button>
+            <ul id="budget-list"></ul>
+        </div>
+
+        <div id="redundancy-section" class="card">
+            <h2>冗余库设定</h2>
+            <input type="number" id="redundancy-limit" placeholder="设置冗余库额度">
+            <button class="button" onclick="setRedundancyLimit()">设定冗余库额度</button>
+            <p>当前冗余库额度: ¥<span id="redundancy-amount">0</span>/<span id="redundancy-limit-display">300</span></p>
+        </div>
+
+        <div id="entries" class="card">
+            <h2>账目信息</h2>
+            <ul id="entry-list"></ul>
+        </div>
+
+        <div id="summary-section" class="card">
+            <h2>消费统计</h2>
+            <button class="button" onclick="sortEntriesByTotal()">按项目总金额排序</button>
+            <ul id="sorted-entry-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
